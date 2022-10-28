@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Email List</title>
+
+    <!-- AXIOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+
+    <!-- VUE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.41/vue.global.min.js"></script>
+
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <main>
+            <ul>
+                <li v-if="emails.length < emailsNumber">Caricando email...</li>
+                <li v-else v-for="email in emails">
+                    {{ email }}
+                </li>
+            </ul>
+        </main>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
